@@ -21,6 +21,16 @@
   align-items: center;
   gap: 2rem;
 }
+.rtl{
+  color: white;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  animation: scrollRightToLeft 20s linear infinite;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+margin-top: 2rem;
+
+}
 
 .Main h1 {
   color: #2fca82;
@@ -83,6 +93,14 @@
 .my-content-class {
   font-family: "Poppins", sans-serif;
 
+}
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(50vw);
+  }
+  100% {
+    transform: translateX(-70vw);
+  }
 }
 @media screen and (max-width: 600px) {
   .Main h1 {
