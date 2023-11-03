@@ -40,7 +40,7 @@ app.post("/", (req, res) => {
   const originalURL = req.body.URL;
   const shortenURL = Math.random().toString(36).substr(2, 5);
   const createdAt = new Date();
-  const newURL = new URL({ shortenURL, originalURL, createdAt });
+  const newURL = new URL({ shortenURL, originalURL});
   newURL.save();
   res.status(200).send({
     message: `http://localhost:5150/${shortenURL}`,

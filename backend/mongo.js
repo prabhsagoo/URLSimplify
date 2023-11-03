@@ -10,6 +10,6 @@ const Schema = new mongoose.Schema({
 
     shortenURL: String,
     originalURL: String,
-    createdAt: Date,});
+    createdAt: { type: Date, default: Date.now, index: { expires: '24h' } },});
 
 export const URL = db.model('URL', Schema);

@@ -52,11 +52,12 @@
   font-size: 1.5rem;
 }
 
-.getUrl{
-display: flex;
-
+.getUrl {
+  display: flex;
+  width: 100%;
+  padding-left: 59%;
 }
-.copy{
+.copy {
   position: relative;
   color: white;
   font-size: 1.5vw;
@@ -64,4 +65,48 @@ display: flex;
   margin-left: 1rem;
   display: none;
   text-align: right;
+}
+.my-confirm-button-class {
+  color: #ffffff;
+  background-color: #2fca82;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.my-title-class{
+  font-family: "Poppins", sans-serif;
+
+}
+.my-content-class {
+  font-family: "Poppins", sans-serif;
+
+}
+@media screen and (max-width: 600px) {
+  .Main h1 {
+    font-size: 8vw;
+  }
+  .Main label {
+    font-size: 4vw;
+  }
+  .text {
+    width: 60vw;
+    height: 7vw;
+    font-size: 1rem;
+  }
+  .btn {
+    width: 30vw;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  .getUrl {
+    padding-left: 38%;
+  }
+  .copy {
+    font-size: 3vw;
+    padding-top: 7px;
+    margin-left: 1rem;
+  }
 }
