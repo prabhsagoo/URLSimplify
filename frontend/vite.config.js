@@ -5,6 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    proxy: { "/api": { target: "http://localhost:5150", changeOrigin: true } },
+    proxy: { "/api": { target: "https://nodejs-production-3676.up.railway.app", changeOrigin: true } },
+    // rewrite: (path) => path.replace(/^\/api/, ''),
+    hmr: {
+      overlay: false // Disable the HMR error overlay
+    }
+
   },
 })

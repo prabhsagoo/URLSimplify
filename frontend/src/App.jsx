@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 function App() {
   const [url, setUrl] = useState("");
 
-  const submitUrl = (e) => {
+  const submitUrl = async (e) => {
     e.preventDefault();
 
     if (url === "") {
@@ -22,18 +22,17 @@ function App() {
       });
     }
 
-    fetch("http://localhost:5150", {
-      method: "POST",
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}`, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ URL: url }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        document.getElementById("copyUrl").value = data.message;
-      });
+      body: JSON.stringify({"URL": url}), // body data type must match "Content-Type" header
+    });
+    const res = await response.json();
+    console.log(res);
+
+    document.getElementById("copyUrl").value = res.message;
   };
 
   return (
