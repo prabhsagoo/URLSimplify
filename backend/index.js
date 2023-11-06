@@ -43,7 +43,7 @@ app.post("/", (req, res) => {
   const newURL = new URL({ shortenURL, originalURL});
   newURL.save();
   res.status(200).send({
-    message: `https://api.urlsimplify.sagoo.dev/${shortenURL}`,
+    message: `https://snipme.me/${shortenURL}`,
   });
 });
 
