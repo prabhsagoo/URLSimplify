@@ -37,7 +37,9 @@ function App() {
 
   return (
     <div className="Main">
-      {/* <span className="rtl">Note: Shortened URLs expire after 24 hours.</span> */}
+      <span className="rtl">
+        {/* Note: Shortened URLs expire after 24 hours. */}
+        </span>
       <h1>URLSimplyfy </h1>
       <label>Paste Your URL Here:</label>
       <input
